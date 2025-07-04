@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>พื้นฐานของภาษาจีนที่ควรรู้</title>
+
+  <!-- ฟอนต์ Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun&family=Thasadith&display=swap" rel="stylesheet">
+
+  <!-- ลิงก์ CSS ภายนอก -->
+  <link href="style.css" rel="stylesheet" type="text/css">
+
+  <style>
+    body {
+      font-family: 'Sarabun', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8f8;
+    }
+
+    .header img {
+      width: 100%;
+    }
+
+    .navigator {
+      background-color: #f8dcdc;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .ul-menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .li-menu a {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .li-menu a:hover,
+    .li-menu a.active {
+      background-color: #d44;
+      color: white;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .center-img {
+      display: block;
+      margin: 20px auto;
+      width: 25%;
+    }
+
+    .footer {
+      background-color: #f2f2f2;
+      padding: 15px;
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+    }
+
+    @media screen and (max-width: 768px) {
+      .ul-menu {
+        flex-direction: column;
+      }
+    }
+
+    .section {
+      scroll-margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="imager/Banner.png.png" alt="Banner coding" />
+  </div>
+
+  <div class="navigator">
+    <ul class="ul-menu">
+      <li class="li-menu"><a href="index.html">หน้าหลัก</a></li>
+      <li class="li-menu"><a href="lang.html">ความสำคัญของการเรียนภาษาจีน</a></li>
+      <li class="li-menu active "><a href="BasicsChinese.html">พื้นฐานของภาษาจีนที่ควรรู้</a></li>
+      <li class="li-menu"><a href="Techniques.html">เทคนิคและวิธีการเรียนภาษาจีนให้เข้าใจง่าย</a></li>
+      <li class="li-menu"><a href="ApplChinese.html">การนำภาษาจีนไปใช้ในชีวิตจริง</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div id="importance" class="section">
+      <h2>ความสำคัญของการเรียนภาษาจีน</h2>
+      <p>ข้อมูลภาพรวมโดย AI
+การเรียนภาษาจีนมีความสำคัญอย่างยิ่งในปัจจุบัน เนื่องจากจีนเป็นประเทศที่มีบทบาทสำคัญทางเศรษฐกิจและการเมืองในเวทีโลก การเรียนภาษาจีนช่วยเปิดโอกาสในการทำงาน การศึกษา และการติดต่อสื่อสารกับคนจีนได้มากขึ้น นอกจากนี้ยังช่วยให้เข้าใจวัฒนธรรมและประวัติศาสตร์จีนได้ลึกซึ้งยิ่งขึ้น </p>
+    </div>
+
+    <img src="imager/homeintro1.png.png" alt="ภาษาจีน" class="center-img" />
+  </div>
+
+  <div class="footer">
+    <p>เว็บไซต์นี้จัดทำเพื่อการศึกษา</p>
+    <p>&copy; จัดทำโดยนางสาวปุณยาพร เทศทิม 11295 ทธ 2/1 วิทยาลัยเทคโนโลยีวานิชบริหารธุรกิจ</p>
+  </div>
+</body>
+</html>

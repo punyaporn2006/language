@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+/* ฟอนต์ */
+.thasadith-regular {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sarabun-regular {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* เมนูบาร์ */
+.ul-bar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  display: flex;           /* ใช้ Flexbox แทน float */
+  /* ถ้าต้องการให้เมนูเต็มแนวนอน ใช้ flex-wrap: nowrap; */
+}
+
+
+.li-bar a {
+  display: block;
+  color: #4b2e00;          /* สีเข้มเหมาะกับพื้นหลัง bisque */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
+}
+
+.li-bar a:hover:not(.active) {
+  background-color: #4b2e00; /* สีเข้มพื้นหลัง */
+  color: black;             /* เปลี่ยนตัวอักษรเป็นสีอ่อน */
+  cursor: pointer;
+}
+
+.active {
+  background-color: rgb(0, 134, 252);
+  color: #4b2e00;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+
+.content {
+  width: 1000px;
+  clear: both;
+  margin: 10px auto 20px auto;
+  background-color: pink;
+  color: black;            /* สีตัวอักษรให้เห็นบนพื้นดำ */
+  padding: 20px;           /* เว้นช่องว่างด้านในกล่อง */
+  border: 2px solid #4b2e00;  /* กรอบกล่องสีเข้มเข้ากับธีม */
+  border-radius: 8px;      /* ขอบโค้งนิดหน่อยดูสวยขึ้น */
+  box-sizing: border-box;  /* รวม border กับ padding ในขนาด width */
+}
