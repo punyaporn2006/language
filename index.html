@@ -5,106 +5,160 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>การเรียนรู้ภาษาจีน</title>
 
-  <!-- ฟอนต์ Google -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sarabun&family=Thasadith&display=swap" rel="stylesheet">
-<link href="style.css" rel="stylesheet" type"text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;600&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: 'Sarabun', sans-serif;
+    :root {
+      --primary: #f15a59;
+      --background: #f9f9fb;
+      --card-bg: #ffffffdd;
+      --dark-text: #222;
+    }
+
+    * {
       margin: 0;
       padding: 0;
-      background-color: #fff8f8;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Sarabun', sans-serif;
+      background: linear-gradient(to bottom right, #fefefe, #ffecec);
+      color: var(--dark-text);
+      line-height: 1.7;
     }
 
     .header img {
       width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
     }
 
-    .navigator {
-      background-color: #f8dcdc;
-      padding: 10px 20px;
+    nav.navigator {
+      background: rgba(255, 230, 230, 0.9);
+      backdrop-filter: blur(8px);
+      padding: 12px 20px;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 999;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     }
 
     .ul-menu {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
       display: flex;
+      list-style: none;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 15px;
     }
 
     .li-menu a {
       text-decoration: none;
-      color: #333;
-      padding: 8px 12px;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
+      color: var(--dark-text);
+      font-weight: bold;
+      padding: 10px 16px;
+      border-radius: 8px;
+      transition: 0.3s ease-in-out;
     }
 
     .li-menu a:hover,
     .li-menu a.active {
-      background-color: #d44;
-      color: white;
+      background-color: var(--primary);
+      color: #fff;
+      transform: scale(1.05);
     }
 
     .content {
-      padding: 20px;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .section {
+      margin-bottom: 40px;
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+    }
+
+    .section p {
+      font-size: 18px;
     }
 
     .center-img {
       display: block;
-      margin: 20px auto;
-      width: 25%;
+      margin: 30px auto 0 auto;
+      width: 300px;
+      max-width: 80%;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s;
     }
 
-    .footer {
+    .center-img:hover {
+      transform: scale(1.05);
+    }
+
+    footer.footer {
       background-color: #f2f2f2;
-      padding: 15px;
+      padding: 20px;
       text-align: center;
-      font-size: 14px;
+      font-size: 15px;
       color: #555;
+      border-top: 1px solid #ddd;
+      margin-top: 50px;
     }
 
     @media screen and (max-width: 768px) {
       .ul-menu {
         flex-direction: column;
+        align-items: center;
       }
-    }
 
-    /* สำหรับการจัดแต่ละส่วน */
-    .section {
-      scroll-margin-top: 100px; /* ให้ anchor ไม่โดนบังตอน sticky */
+      .li-menu a {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
+
+  <!-- ส่วนหัว -->
   <div class="header">
-    <img src="imager/Banner.png.png" alt="Banner codeing" />
+    <img src="imager/Banner.png.png" alt="แบนเนอร์" />
   </div>
 
-  <div class="navigator">
+  <!-- เมนูนำทาง -->
+  <nav class="navigator">
     <ul class="ul-menu">
-      <li class="li-menu "active"><a  href="index.html">หน้าหลัก</a></li>
+      <li class="li-menu"><a href="index.html" class="active">หน้าหลัก</a></li>
       <li class="li-menu"><a href="lang.html">ความสำคัญของการเรียนภาษาจีน</a></li>
       <li class="li-menu"><a href="BasicsChinese.html">พื้นฐานของภาษาจีนที่ควรรู้</a></li>
-      <li class="li-menu"><a href="Techniques.html">เทคนิคและวิธีการเรียนภาษาจีนให้เข้าใจง่าย</a></li>
-      <li class="li-menu"><a href="ApplChinese.html">การนำภาษาจีนไปใช้ในชีวิตจริง</a></li>
+      <li class="li-menu"><a href="Techniques.html">เทคนิคการเรียนภาษาจีน</a></li>
+      <li class="li-menu"><a href="ApplChinese.html">การใช้งานจริง</a></li>
     </ul>
-  </div>
+  </nav>
 
+  <!-- เนื้อหา -->
   <div class="content">
+
     <div id="home" class="section">
-      <p>ในโลกยุคปัจจุบันที่ความเชื่อมโยงระหว่างประเทศมีความสำคัญมากขึ้นทุกวัน การเรียนรู้ภาษาต่างประเทศจึงกลายเป็นทักษะที่จำเป็น โดยเฉพาะภาษาจีน ซึ่งเป็นภาษาที่มีผู้ใช้มากที่สุดในโลก และมีบทบาทสำคัญทั้งในด้านเศรษฐกิจ การศึกษา และวัฒนธรรม การเรียนภาษาจีนจึงไม่ใช่เพียงแค่การเรียนรู้ภาษาใหม่ แต่ยังเป็นการเปิดประตูสู่โอกาสใหม่ ๆ อีกมากมาย</p>
+      <p>ในโลกยุคปัจจุบันที่ความเชื่อมโยงระหว่างประเทศมีความสำคัญมากขึ้นทุกวัน การเรียนรู้ภาษาต่างประเทศจึงกลายเป็นทักษะที่จำเป็น โดยเฉพาะภาษาจีน ซึ่งเป็นภาษาที่มีผู้ใช้มากที่สุดในโลก และมีบทบาทสำคัญทั้งในด้านเศรษฐกิจ การศึกษา และวัฒนธรรม</p>
     </div>
 
     <div id="importance" class="section">
-      <p>ภาษาจีนมีเอกลักษณ์เฉพาะตัว ทั้งในด้านตัวอักษร ระบบเสียง และโครงสร้างทางไวยากรณ์ ซึ่งต่างจากภาษาไทยและภาษาอื่น ๆ ที่เราคุ้นเคย ความท้าทายเหล่านี้อาจทำให้ผู้เรียนรู้สึกยากในช่วงแรก แต่เมื่อเข้าใจหลักการและฝึกฝนอย่างสม่ำเสมอ ก็สามารถพัฒนาได้อย่างต่อเนื่อง นอกจากนี้ การเรียนภาษาจีนยังช่วยฝึกสมาธิและการคิดอย่างมีระบบอีกด้วย</p>
+      <p>ภาษาจีนมีเอกลักษณ์เฉพาะตัว ทั้งในด้านตัวอักษร ระบบเสียง และโครงสร้างทางไวยากรณ์ ซึ่งต่างจากภาษาไทยและภาษาอื่น ๆ ที่เราคุ้นเคย ความท้าทายเหล่านี้อาจทำให้ผู้เรียนรู้สึกยากในช่วงแรก แต่เมื่อเข้าใจหลักการและฝึกฝนอย่างสม่ำเสมอ ก็สามารถพัฒนาได้อย่างต่อเนื่อง</p>
     </div>
 
     <div id="basic" class="section">
@@ -119,12 +173,16 @@
       <p>การนำภาษาจีนไปใช้ในชีวิตจริง เช่น การทำงานด้านการค้า, การท่องเที่ยว, การศึกษาต่อในจีน หรือการใช้ในโซเชียลมีเดียและชีวิตประจำวัน</p>
     </div>
 
-    <img src="imager/homeintro1.png.png" alt="ภาษาจีน" class="center-img" />
+    <!-- รูปภาพภาษาจีน -->
+    <img src="imager/homeintro1.png.png" alt="ภาษาจีนในชีวิตจริง" class="center-img" />
+
   </div>
 
-  <div class="footer">
+  <!-- ส่วนท้าย -->
+  <footer class="footer">
     <p>เว็บไซต์นี้จัดทำเพื่อการศึกษา</p>
-    <p>&copy; จัดทำโดยนางสาวปุณยาพร เทศทิม 11295 ทธ 2/1 วิทยาลัยเทคโนโลยีวานิชบริหารธุรกิจ</p>
-  </div>
+    <p>&copy; จัดทำโดย นางสาวปุณยาพร เทศทิม | 11295 ทธ 2/1 | วิทยาลัยเทคโนโลยีวานิชบริหารธุรกิจ</p>
+  </footer>
+
 </body>
 </html>
